@@ -458,6 +458,9 @@ void MainWindow::handleRequestForActivities(QNetworkReply *reply)
             _tempDatabaseActivities.emplace_back(Activity(id, foundPlant.value_or(Plant(id, "Custom Plant")), description, duration, repeat, date, gardenId));
             //ui->listWidget_activities->addItem(QString::fromStdString(plantList[plantId].name + " - " + description));
         }
+        std::sort(_tempDatabaseActivities.begin(), _tempDatabaseActivities.end(), [](const auto activity1, const auto activity2) {
+           return activity1.date < activity2.date;
+        });
         // sada su spremljeni activityji i treba se za svakog gettati workere
         _tempRequestsLeft = arraySize;
         connect(requestManager, &QNetworkAccessManager::finished, this, &MainWindow::handleWorkersForActivity);

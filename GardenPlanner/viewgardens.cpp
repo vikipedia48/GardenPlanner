@@ -59,6 +59,7 @@ void ViewGardens::receiveActivities(const std::vector<Activity> &activities)
     auto gardenId = activities[0].gardenId;
     for (auto i = 0; i < gardenList.size(); ++i) {
         if (gardenList[i].id == gardenId) {
+            ui->listWidget_activities->clear();
             gardenList[i].activities = activities;
             for (auto& v : gardenList[i].activities) {
                 QString label;
