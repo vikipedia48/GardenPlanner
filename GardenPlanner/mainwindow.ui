@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>823</width>
+    <height>542</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="widgetWindow"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>823</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuUser">
+    <property name="title">
+     <string>User</string>
+    </property>
+    <addaction name="actionLogin"/>
+    <addaction name="actionRegister"/>
+    <addaction name="actionLogout"/>
+   </widget>
+   <widget class="QMenu" name="menuHome">
+    <property name="title">
+     <string>Home</string>
+    </property>
+    <addaction name="actionGo_home"/>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuGardens">
+    <property name="title">
+     <string>Gardens</string>
+    </property>
+    <addaction name="actionAdd_garden"/>
+    <addaction name="actionView_gardens"/>
+    <addaction name="actionCustom_plants"/>
+   </widget>
+   <addaction name="menuHome"/>
+   <addaction name="menuUser"/>
+   <addaction name="menuGardens"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionGo_home">
+   <property name="text">
+    <string>Go home</string>
+   </property>
+  </action>
+  <action name="actionLogin">
+   <property name="text">
+    <string>Login</string>
+   </property>
+  </action>
+  <action name="actionRegister">
+   <property name="text">
+    <string>Register</string>
+   </property>
+  </action>
+  <action name="actionLogout">
+   <property name="text">
+    <string>Logout</string>
+   </property>
+  </action>
+  <action name="actionAdd_garden">
+   <property name="text">
+    <string>Add garden</string>
+   </property>
+  </action>
+  <action name="actionView_gardens">
+   <property name="text">
+    <string>View gardens</string>
+   </property>
+  </action>
+  <action name="actionCustom_plants">
+   <property name="text">
+    <string>Custom plants</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionPurchase_product">
+   <property name="text">
+    <string>Purchase product</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

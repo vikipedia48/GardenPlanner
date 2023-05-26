@@ -1,0 +1,35 @@
+[package]
+name = "garden-planner"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+trace-id = { path = "crates/trace-id" }
+logger = { path = "crates/logger" }
+axum = { version = "0.6", features = ["headers", "macros"]}
+axum-extra = { version = "0.4", features = ["cookie-signed"]}
+tokio = { version = "1.21", features = ["full"] }
+log = "0.4"
+sqlx = { version = "0.6", features = ["runtime-tokio-rustls", "postgres", "uuid", "time", "chrono", "macros"] }
+anyhow = "1.0"
+dotenvy = "0.15"
+serde = "1.0"
+serde_json = "1.0"
+bcrypt = "0.14"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.3", features = ["serde", "v4"] }
+base64 = "0.21"
+rsa = { version = "0.9", features = ["sha2"] }
+rand = "0.8"
+digest = "0.10"
+
+[profile.dev.package.num-bigint-dig]
+opt-level = 3
+
+[dev-dependencies]
+reqwest = { version = "0.11", features = ["rustls-tls", "json", "cookies"] }
+
+[workspace]
+members = ["crates/*"]
